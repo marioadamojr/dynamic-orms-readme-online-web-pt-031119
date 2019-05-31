@@ -1,11 +1,16 @@
-#!/usr/bin/env ruby 
+#!/usr/bin/env ruby
 require 'sqlite3'
 
 require_relative "../lib/song.rb"
 require_relative "../config/environment.rb"
 
 
-song = Song.new(name: "Hello", album: "25")
+song = Song.new(name: "Test_Name_0", album: "Test_Album_0")
+puts "song name: " + song.name
+puts "song album: " + song.album
+song.save
+
+song = Song.new(name: "Test_Name_1", album: "Test_Album_1")
 puts "song name: " + song.name
 puts "song album: " + song.album
 song.save
