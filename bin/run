@@ -9,11 +9,12 @@ song = Song.new(name: "Test_Name_0", album: "Test_Album_0")
 puts "song name: " + song.name
 puts "song album: " + song.album
 song.save
+puts song.id
 
 song = Song.new(name: "Test_Name_1", album: "Test_Album_1")
 puts "song name: " + song.name
 puts "song album: " + song.album
-puts song.cid
 song.save
+puts song.id
 
 DB[:conn].execute("SELECT * FROM songs")
