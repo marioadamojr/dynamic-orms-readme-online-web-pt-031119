@@ -13,7 +13,7 @@ song.save
 song = Song.new(name: "Test_Name_1", album: "Test_Album_1")
 puts "song name: " + song.name
 puts "song album: " + song.album
-puts song.cid
+puts song.id
 song.save
 
 DB[:conn].execute("SELECT * FROM songs")
